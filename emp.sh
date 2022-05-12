@@ -10,5 +10,13 @@ then
 else
      echo "Employee is absent";
 fi
+echo "---------------------------------"
 
+#uc_1
+
+EMP_WAGE_PER_HOUR=20;
+WORKING_HOUR=8;
+dailywage=$((EMP_WAGE_PER_HOUR * WORKING_HOUR));
+echo "Employee dailywage is :$dailywage";
+echo "-----------------------------------------------"
 
