@@ -29,3 +29,28 @@ dailywage=$((EMP_WAGE_PER_HOUR * PART_TIME_WORKING_HOUR));
 echo "Employee dailywage is :$dailywage";
 echo "------------------------------------------------------------"
 
+function getWorikingHour(){
+      case $1 in
+                    $PRESENT)
+                              workingHour=8;
+                     ;;
+                    $PART_TIME)
+                               workingHour=4;
+                      ;;
+                     *)
+                       workingHour=0;
+                       ;;
+        esac;
+
+echo $workingHour;
+
+}
+if [ $PRESENT -eq $workingHour ]
+then
+dailywage=$((EMP_WAGE_PER_HOUR * WORKING_HOUR));
+echo "Employee dailywage is :$dailywage";
+       
+else
+        dailywage=$((EMP_WAGE_PER_HOUR * PART_TIME_WORKING_HOUR));
+echo "Employee dailywage is :$dailywage";
+fi
